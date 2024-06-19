@@ -48,10 +48,22 @@ button:hover {
   cursor: pointer;
 }
 
+#hamburger-menu {
+  /* align-self: center; */
+  margin-inline-start: auto;
+}
+#hamburger-menu > img {
+  height: 100%;
+  width: 100%;
+}
+
 #features-list,
 #company-list {
   position: relative;
   display: inline-block;
+}
+#desktop-nav {
+  display: none;
 }
 #login-li {
   margin-inline-start: auto;
@@ -60,6 +72,7 @@ button:hover {
   border: 1px solid var(--almost-black);
   padding-inline: 1rem;
   padding-block: 0.5rem;
+  border-radius: 8px;
 }
 [popover] {
   inset: unset;
@@ -135,9 +148,13 @@ li {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 @media (min-width: 35rem) {
   #hamburger-menu {
     display: none;
+  }
+  #desktop-nav {
+    display: block;
   }
 }
