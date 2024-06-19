@@ -37,11 +37,11 @@
                 src="./images/icon-arrow-down.svg"
                 alt="chevron arrow pointing down" />
             </button>
-            <div id="features-popover" popover></div>
+            <div id="features-popover" popover="manual"></div>
             <menu class="features-menu">
               <li>
                 <img src="./images/icon-todo.svg" alt="todo icon" />
-                Todo list
+                Todo List
               </li>
               <li>
                 <img src="./images/icon-calendar.svg" alt="calendar icon" />
@@ -57,14 +57,16 @@
               </li>
             </menu>
           </li>
-          <li>
+          <li id="company-list">
             <button popovertarget="company-popover">
               Company
               <img
                 src="./images/icon-arrow-down.svg"
                 alt="chevron arrow pointing down" />
             </button>
-            <menu id="company-popover" popover>
+            <div id="company-popover" popover="manual"></div>
+
+            <menu id="company-menu">
               <li>History</li>
               <li>Our Team</li>
               <li>Blog</li>

@@ -9,7 +9,8 @@ button:hover {
   cursor: pointer;
 }
 
-#features-list {
+#features-list,
+#company-list {
   position: relative;
   display: inline-block;
 }
@@ -34,15 +35,43 @@ button:hover {
 .features-menu {
   display: none;
   position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  margin-top: 2px;
+  color: black;
+  padding: 0.5rem 0.8rem;
+
+  height: 7rem;
+  width: 7rem;
+}
+
+#company-menu {
+  display: none;
+  position: absolute;
   left: 0;
   top: 100%;
   background: white;
   margin-top: 2px;
   color: black;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
+
+  height: 7rem;
+  width: 7rem;
 }
-[popover]:popover-open + .features-menu {
-  display: block;
+
+.features-menu > li {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  font-size: 0.8rem;
+}
+[popover]:popover-open + :is(.features-menu, #company-menu) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.5rem;
 }
 
 header {
