@@ -73,7 +73,22 @@ button:hover {
 #login-li {
   margin-inline-start: auto;
 }
+#mobile-login-btn,
+#mobile-register-btn {
+  justify-content: center;
+  padding-block: 0.8rem;
+}
 
+#mobile-register-btn {
+  border: 1px solid var(--almost-black);
+  border-radius: 15px;
+}
+.mobile-btns {
+  width: 100%;
+}
+.mobile-btns > button {
+  width: 100%;
+}
 #mobile-menu:popover-open {
   display: flex;
   border: 0;
@@ -93,46 +108,13 @@ button:hover {
 
   width: 100%;
 }
+
 #mobile-features-list:hover > #mobile-features-menu,
 #mobile-company-list:hover > #mobile-company-menu {
   display: flex;
   flex-direction: column;
 }
 
-/* #mobile-features-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  background: white;
-  margin-top: 2px;
-  color: black;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0px 0px 200px -30px var(--almost-black);
-  width: 7rem;
-} */
-/* 
-#company-menu {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: white;
-  margin-top: 2px;
-  color: black;
-
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0px 0px 200px -30px var(--almost-black);
-  width: 7rem;
-} */
-/* [popover]:popover-open + :is(#mobile-features-menu) {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 0.5rem;
-} */
 #register-btn {
   border: 1px solid var(--almost-black);
   padding-inline: 1rem;
@@ -183,7 +165,8 @@ button:hover {
   width: 7rem;
 }
 
-.features-menu > li {
+.features-menu > li,
+#mobile-features-menu > li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -191,7 +174,8 @@ button:hover {
 
   font-size: 0.8rem;
 }
-.features-menu > li > img {
+.features-menu > li > img,
+#mobile-features-menu > li > img {
   height: 1rem;
 }
 [popover]:popover-open + :is(.features-menu, #company-menu) {
