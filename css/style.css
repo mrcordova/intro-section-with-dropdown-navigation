@@ -1,5 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
   --almost-black: hsl(0, 0%, 8%);
+}
+
+.epilogue-500 {
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.epilogue-700 {
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 body {
   height: 100vh;
@@ -8,13 +25,23 @@ body {
   /* place-content: safe center; */
 }
 
+header {
+  display: flex;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  align-items: center;
+}
+nav {
+  display: flex;
+  width: 100%;
+}
+
 button {
   display: flex;
   align-items: baseline;
   gap: 0.2rem;
 }
 button > img {
-  /* height: 0.3rem; */
   width: 0.6rem;
 }
 button:hover {
@@ -28,6 +55,11 @@ button:hover {
 }
 #login-li {
   margin-inline-start: auto;
+}
+#register-btn {
+  border: 1px solid var(--almost-black);
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
 }
 [popover] {
   inset: unset;
@@ -91,16 +123,9 @@ button:hover {
   gap: 0.5rem;
 }
 
-header {
-  display: flex;
-}
-nav {
-  display: flex;
-  width: 100%;
-}
-
 #desktop-menu {
   display: flex;
+  align-items: center;
   flex: 1;
   gap: 1rem;
 }
@@ -108,7 +133,9 @@ nav {
 li {
   list-style: none;
 }
-
+a {
+  text-decoration: none;
+}
 @media (min-width: 35rem) {
   #hamburger-menu {
     display: none;
