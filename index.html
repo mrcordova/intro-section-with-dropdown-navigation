@@ -93,14 +93,15 @@
           <button popovertarget="mobile-menu">
             <img src="./images/icon-close-menu.svg" alt="close icon" />
           </button>
-          <li>
-            <button popovertarget="mobile-features-popover">
+          <li id="mobile-features-list">
+            <button>
               Features
               <img
                 src="./images/icon-arrow-down.svg"
                 alt="chevron arrow pointing down" />
             </button>
-            <menu id="mobile-features-popover" popover="manual">
+            <!-- <div id="mobile-features-popover" popover="manual"></div> -->
+            <menu id="mobile-features-menu">
               <li>
                 <img src="./images/icon-todo.svg" alt="todo icon" />
                 Todo List
@@ -119,8 +120,8 @@
               </li>
             </menu>
           </li>
-          <li>
-            <button popovertarget="mobile-company-popover">
+          <li id="mobile-company-list">
+            <button >
               Company
               <img
                 src="./images/icon-arrow-down.svg"
@@ -128,7 +129,7 @@
             </button>
             <div></div>
 
-            <menu id="mobile-company-popover" popover="manual">
+            <menu id="mobile-company-menu" ">
               <li>History</li>
               <li>Our Team</li>
               <li>Blog</li>

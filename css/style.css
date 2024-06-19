@@ -71,6 +71,7 @@ button:hover {
 
 #mobile-menu:popover-open {
   display: flex;
+  /* flex: 1; */
   height: 100%;
   width: 50%;
   bottom: 0;
@@ -78,10 +79,55 @@ button:hover {
   left: auto;
   flex-direction: column;
 }
-
 #mobile-menu::backdrop {
   background-color: hsl(from var(--almost-black) h s l / 0.5);
 }
+#mobile-features-menu,
+#mobile-company-menu {
+  display: none;
+
+  width: 100%;
+}
+#mobile-features-list:hover > #mobile-features-menu,
+#mobile-company-list:hover > #mobile-company-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #mobile-features-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  margin-top: 2px;
+  color: black;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 200px -30px var(--almost-black);
+  width: 7rem;
+} */
+/* 
+#company-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: white;
+  margin-top: 2px;
+  color: black;
+
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 200px -30px var(--almost-black);
+  width: 7rem;
+} */
+/* [popover]:popover-open + :is(#mobile-features-menu) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+} */
 #register-btn {
   border: 1px solid var(--almost-black);
   padding-inline: 1rem;
