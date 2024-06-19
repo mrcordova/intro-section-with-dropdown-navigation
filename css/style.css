@@ -1,0 +1,62 @@
+body {
+  height: 100vh;
+  height: 100svh;
+  /* display: grid; */
+  /* place-content: safe center; */
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#features-list {
+  position: relative;
+  display: inline-block;
+}
+
+[popover] {
+  inset: unset;
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  pointer-events: none;
+
+  overlay: none;
+}
+
+.features-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: white;
+  margin-top: 2px;
+  color: black;
+  padding: 0.5rem 1rem;
+}
+[popover]:popover-open + .features-menu {
+  display: block;
+}
+
+header {
+  display: flex;
+}
+
+#desktop-menu {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+@media (min-width: 35rem) {
+  #hamburger-menu {
+    display: none;
+  }
+}

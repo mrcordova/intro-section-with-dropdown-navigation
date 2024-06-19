@@ -29,15 +29,16 @@
     <header>
       <img src="./images/logo.svg" alt="snap logo" />
       <nav>
-        <menu type="toolbar">
-          <li>
-            <button>
+        <menu id="desktop-menu" type="toolbar">
+          <li id="features-list">
+            <button id="features-btn" popovertarget="features-popover">
               Features
               <img
                 src="./images/icon-arrow-down.svg"
                 alt="chevron arrow pointing down" />
             </button>
-            <menu>
+            <div id="features-popover" popover></div>
+            <menu class="features-menu">
               <li>
                 <img src="./images/icon-todo.svg" alt="todo icon" />
                 Todo list
@@ -54,22 +55,22 @@
                 <img src="./images/icon-planning.svg" alt="planning icon" />
                 Planning
               </li>
+            </menu>
           </li>
           <li>
-            <button>
+            <button popovertarget="company-popover">
               Company
               <img
                 src="./images/icon-arrow-down.svg"
                 alt="chevron arrow pointing down" />
             </button>
-            <menu>
+            <menu id="company-popover" popover>
               <li>History</li>
               <li>Our Team</li>
               <li>Blog</li>
             </menu>
           </li>
           <!-- <div> -->
-          </menu>
           <!-- </div> -->
           <li>Careers</li>
           <li>About</li>
@@ -80,7 +81,11 @@
         </menu>
       </nav>
       <button>
-        <img src="./images/icon-menu.svg" alt="menu icon" aria-label="menu" />
+        <img
+          id="hamburger-menu"
+          src="./images/icon-menu.svg"
+          alt="menu icon"
+          aria-label="menu" />
       </button>
     </header>
     <main>
