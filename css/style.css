@@ -74,7 +74,7 @@ button:hover {
   padding-block: 0.5rem;
   border-radius: 8px;
 }
-[popover] {
+:first-child([popover]) {
   inset: unset;
   width: auto;
   height: auto;
@@ -156,5 +156,8 @@ a {
   }
   #desktop-nav {
     display: block;
+  }
+  #mobile-nav {
+    display: none;
   }
 }

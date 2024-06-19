@@ -88,7 +88,60 @@
           </li>
         </menu>
       </nav>
-      <button id="hamburger-menu">
+      <nav id="mobile-nav">
+        <menu id="mobile-menu" type="toolbar" popover>
+          <li>
+            <button popovertarget="mobile-features-popover">
+              Features
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="chevron arrow pointing down" />
+            </button>
+            <menu id="mobile-features-popover" popover="manual">
+              <li>
+                <img src="./images/icon-todo.svg" alt="todo icon" />
+                Todo List
+              </li>
+              <li>
+                <img src="./images/icon-calendar.svg" alt="calendar icon" />
+                Calendar
+              </li>
+              <li>
+                <img src="./images/icon-reminders.svg" alt="reminders icon" />
+                Reminders
+              </li>
+              <li>
+                <img src="./images/icon-planning.svg" alt="planning icon" />
+                Planning
+              </li>
+            </menu>
+          </li>
+          <li>
+            <button popovertarget="mobile-company-popover">
+              Company
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="chevron arrow pointing down" />
+            </button>
+            <div></div>
+
+            <menu id="mobile-company-popover" popover="manual">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </menu>
+          </li>
+          <!-- <div> -->
+          <!-- </div> -->
+          <li>
+            <a href="#">Careers</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </menu>
+      </nav>
+      <button id="hamburger-menu" popovertarget="mobile-menu">
         <img src="./images/icon-menu.svg" alt="menu icon" aria-label="menu" />
       </button>
     </header>
