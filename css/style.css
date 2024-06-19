@@ -56,7 +56,12 @@ button:hover {
   height: 100%;
   width: 100%;
 }
-
+#close-btn {
+  align-self: flex-end;
+}
+#close-img {
+  width: 2rem;
+}
 #features-list,
 #company-list {
   position: relative;
@@ -71,7 +76,7 @@ button:hover {
 
 #mobile-menu:popover-open {
   display: flex;
-  /* flex: 1; */
+  border: 0;
   height: 100%;
   width: 50%;
   bottom: 0;
