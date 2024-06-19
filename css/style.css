@@ -68,6 +68,20 @@ button:hover {
 #login-li {
   margin-inline-start: auto;
 }
+
+#mobile-menu:popover-open {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  flex-direction: column;
+}
+
+#mobile-menu::backdrop {
+  background-color: hsl(from var(--almost-black) h s l / 0.5);
+}
 #register-btn {
   border: 1px solid var(--almost-black);
   padding-inline: 1rem;
