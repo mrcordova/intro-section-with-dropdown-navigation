@@ -5,6 +5,15 @@ body {
   /* place-content: safe center; */
 }
 
+button {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+button > img {
+  /* height: 0.3rem; */
+  width: 0.6rem;
+}
 button:hover {
   cursor: pointer;
 }
