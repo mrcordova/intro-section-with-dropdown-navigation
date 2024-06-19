@@ -31,6 +31,14 @@ header {
   padding-inline: 2rem;
   align-items: center;
 }
+main {
+  /* height: 100vh;
+  height: 100svh; */
+  display: grid;
+  grid-template-rows: auto-fit;
+  grid-template-columns: repeat(2, minmax(auto-fit, 1fr));
+  /* flex-wrap: wrap-reverse; */
+}
 nav {
   display: flex;
   width: 100%;
@@ -48,6 +56,10 @@ button:hover {
   cursor: pointer;
 }
 
+.main-text-container {
+}
+.main-img-container > picture {
+}
 #hamburger-menu {
   /* align-self: center; */
   margin-inline-start: auto;
@@ -208,5 +220,15 @@ a {
   }
   #mobile-nav {
     display: none;
+  }
+
+  main {
+    grid-template-columns: repeat(2, minmax(auto-fit, 1fr));
+  }
+  .main-text-container {
+    grid-column: 1;
+  }
+  .main-img-container {
+    grid-column: 2;
   }
 }
