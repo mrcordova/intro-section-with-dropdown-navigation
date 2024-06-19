@@ -13,7 +13,9 @@ button:hover {
   position: relative;
   display: inline-block;
 }
-
+#login-li {
+  margin-inline-start: auto;
+}
 [popover] {
   inset: unset;
   width: auto;
@@ -46,9 +48,14 @@ button:hover {
 header {
   display: flex;
 }
+nav {
+  display: flex;
+  width: 100%;
+}
 
 #desktop-menu {
   display: flex;
+  flex: 1;
 }
 
 li {
