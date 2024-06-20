@@ -49,6 +49,13 @@ main {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
+
+  padding-inline: clamp(0rem, -2.9225rem + 12.4695vw, 8.3rem)
+    clamp(0rem, -2.1127rem + 9.0141vw, 6rem);
+  padding-block-end: clamp(0rem, -1.0563rem + 4.507vw, 3rem);
+  /* Desktop */
+  /* padding-inline: 8.3rem 6rem; */
+  /* padding-block-end: 3rem; */
 }
 nav {
   display: flex;
@@ -366,8 +373,6 @@ a:hover {
 
   main {
     flex-direction: row;
-    padding-inline: 8.3rem 6rem;
-    padding-block-end: 3rem;
   }
 
   .main-title {
