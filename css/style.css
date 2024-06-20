@@ -130,24 +130,38 @@ button:hover {
   justify-content: flex-start;
   align-items: center;
   gap: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+
   /* Mobile */
-  margin-block-start: 2.9rem;
+  /* margin-block-start: 2.9rem; */
   /* gap: 2rem; */
   /* Desktop */
-  /* margin-block-start: auto; */
+  margin-block-start: auto;
   /* gap: 2.5rem; */
 }
 .client-container > img:first-child {
-  width: 4.9rem;
+  /* width: 4.9rem; */
+  /* Desktop */
+  /* width: 7rem; */
+
+  width: clamp(4.9rem, 4.1606rem + 3.1549vw, 7rem);
 }
 .client-container > img:nth-child(2) {
-  width: 3.3rem;
+  /* width: 3.3rem; */
+  /* Desktop */
+  /* width: 4.5rem; */
+  width: clamp(3.3rem, 2.8775rem + 1.8028vw, 4.5rem);
 }
 .client-container > img:nth-child(3) {
-  width: 4rem;
+  /* width: 4rem; */
+  /* Desktop */
+  /* width: 5.8rem; */
+  width: clamp(4rem, 3.3662rem + 2.7042vw, 5.8rem);
 }
 .client-container > img:last-child {
-  width: 3.5rem;
+  /* width: 3.5rem; */
+  /* Desktop */
+  /* width: 5rem; */
+  width: clamp(3.5rem, 2.9718rem + 2.2535vw, 5rem);
 }
 #learn-btn {
   color: var(--almost-white);
