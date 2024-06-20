@@ -76,7 +76,7 @@ button:hover {
   flex-direction: column;
   flex: 1;
   padding-inline: 2.3rem;
-  padding-block: 6.6rem 0rem;
+  padding-block: 6.4rem 0rem;
   /* grid-row: 2;÷ */
 }
 .main-img-container {
@@ -108,8 +108,8 @@ button:hover {
 .client-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /* gap: 2.5rem; */
+  justify-content: flex-start;
+  gap: 2.5rem;
   align-items: center;
   margin-block-start: auto;
   /* flex: 1; */
@@ -123,9 +123,10 @@ button:hover {
 #learn-btn {
   color: var(--almost-white);
   background-color: var(--almost-black);
-  padding-block: 1rem;
-  padding-inline: 2rem;
+  padding-block: 0.9rem;
+  padding-inline: 1.85rem;
   border-radius: 15px;
+  font-size: 1.1rem;
   align-self: flex-start;
 }
 #hamburger-menu {
