@@ -182,10 +182,13 @@ button:hover {
 }
 
 #register-btn {
-  border: 1px solid var(--almost-black);
+  border: 1px solid var(--medium-gray);
   padding-inline: 1rem;
   padding-block: 0.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
+}
+#register-btn:hover {
+  border: 1px solid var(--almost-black);
 }
 :first-child([popover]) {
   inset: unset;
