@@ -64,6 +64,15 @@ button {
   align-items: baseline;
   gap: 0.2rem;
 }
+
+#features-btn,
+#company-btn {
+  color: var(--medium-gray);
+}
+
+:is(#features-btn, #company-btn):hover {
+  color: var(--almost-black);
+}
 button > img {
   width: 0.6rem;
 }
@@ -265,6 +274,9 @@ button:hover {
 #mobile-features-menu > li > img {
   height: 1rem;
 }
+:is(#features-popover, #company-popover):popover-open {
+  border: 0;
+}
 [popover]:popover-open + :is(.features-menu, #company-menu) {
   display: flex;
   flex-direction: column;
@@ -284,7 +296,10 @@ li {
 }
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--medium-gray);
+}
+a:hover {
+  color: var(--almost-black);
 }
 @media (min-width: 35rem) {
   #hamburger-menu {
