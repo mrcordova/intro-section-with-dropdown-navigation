@@ -31,8 +31,8 @@ header {
   display: flex;
   align-items: center;
   /* Mobile */
-  padding-block: 1.5rem 1.5rem;
-  padding-inline: 0.6rem 1.2rem;
+  padding-block: 1.5rem 0rem;
+  padding-inline: 0.6rem 0.6rem;
   /* Desktop */
   /* padding-block: 1.5rem 4rem; */
   /* padding-inline: 2.7rem 2.4rem; */
@@ -70,8 +70,13 @@ button:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-inline: 2.3rem;
-  padding-block: 6.4rem 0rem;
+  /* Mobile */
+  padding-inline: 0.6rem;
+  padding-block: 1.1rem 2.6rem;
+  align-items: center;
+  /* Desktop */
+  /* padding-inline: 2.3rem; */
+  /* padding-block: 6.4rem 0rem; */
 }
 .main-img-container {
   flex: 1;
@@ -84,15 +89,29 @@ button:hover {
   object-fit: contain;
 }
 .main-title {
-  font-size: 4.9rem;
+  /* Mobile */
+  font-size: 2.2rem;
   line-height: 1;
-  max-width: 11ch;
-  padding-block-end: 3.3rem;
+  max-width: 16ch;
+  padding-block-end: 1.4rem;
+  text-align: center;
+  /* Desktop */
+  /* font-size: 4.9rem; */
+  /* line-height: 1; */
+  /* max-width: 11ch; */
+  /* padding-block-end: 3.3rem; */
 }
 .main-para {
-  font-size: 1.13rem;
+  color: var(--medium-gray);
+  text-align: center;
+  /* Mobile */
+  font-size: 1rem;
   max-width: 45ch;
-  padding-block-end: 3.2rem;
+  padding-block-end: 1.9rem;
+  /* Desktop */
+  /* font-size: 1.13rem; */
+  /* max-width: 45ch; */
+  /* padding-block-end: 3.2rem; */
 }
 .client-container {
   display: flex;
@@ -107,11 +126,17 @@ button:hover {
 #learn-btn {
   color: var(--almost-white);
   background-color: var(--almost-black);
-  padding-block: 0.9rem;
-  padding-inline: 1.85rem;
+  align-self: center;
+  /* Mobile */
+  padding-block: 0.8rem;
+  padding-inline: 1.3rem;
   border-radius: 15px;
-  font-size: 1.1rem;
-  align-self: flex-start;
+  font-size: 1rem;
+  /* Desktop */
+  /* padding-block: 0.9rem; */
+  /* padding-inline: 1.85rem; */
+  /* border-radius: 15px; */
+  /* font-size: 1.1rem; */
 }
 
 #learn-btn:hover {
@@ -299,5 +324,19 @@ a:hover {
     flex-direction: row;
     padding-inline: 8.3rem 6rem;
     padding-block-end: 3rem;
+  }
+
+  .main-title {
+    max-width: 11ch;
+    text-align: left;
+  }
+  .main-text-container {
+    align-items: flex-start;
+  }
+  .main-para {
+    text-align: left;
+  }
+  #learn-btn {
+    align-self: flex-start;
   }
 }
