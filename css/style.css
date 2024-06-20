@@ -117,11 +117,25 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 2.5rem;
   align-items: center;
-  margin-block-start: auto;
+  /* Mobile */
+  margin-block-start: 2.9rem;
+  gap: 2rem;
+  /* Desktop */
+  /* margin-block-start: auto; */
+  /* gap: 2.5rem; */
 }
-.client-container > img {
+.client-container > img:first-child {
+  width: 4.9rem;
+}
+.client-container > img:nth-child(2) {
+  width: 3.3rem;
+}
+.client-container > img:nth-child(3) {
+  width: 4rem;
+}
+.client-container > img:last-child {
+  width: 3.5rem;
 }
 #learn-btn {
   color: var(--almost-white);
