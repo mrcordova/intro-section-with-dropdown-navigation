@@ -63,21 +63,15 @@ button {
   display: flex;
   align-items: baseline;
   gap: 0.2rem;
-}
-
-#features-btn,
-#company-btn {
   color: var(--medium-gray);
 }
 
-:is(#features-btn, #company-btn):hover {
-  color: var(--almost-black);
-}
 button > img {
   width: 0.6rem;
 }
 button:hover {
   cursor: pointer;
+  color: var(--almost-black);
 }
 
 .main-text-container {
