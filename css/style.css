@@ -49,8 +49,8 @@ main {
   /* place-content: safe center; */
   /* grid-template-columns: 1fr; */
   /* grid-template-rows: 1fr; */
-  padding-inline: 8.5rem;
-  padding-block: 2rem;
+  padding-inline: 8.3rem 6rem;
+  padding-block: 4rem 3rem;
 }
 nav {
   display: flex;
@@ -106,6 +106,7 @@ button:hover {
   padding-block: 1rem;
   padding-inline: 2rem;
   border-radius: 15px;
+  align-self: flex-start;
 }
 #hamburger-menu {
   /* align-self: center; */
