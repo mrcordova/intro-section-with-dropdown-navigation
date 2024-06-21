@@ -8,7 +8,10 @@ const toggleSubMenu = function (e) {
   e.currentTarget.nextElementSibling.classList.toggle("show-submenu");
   changeArrowImg(img);
 };
-
+const desktopArrowChange = function (e) {
+  const img = e.currentTarget.querySelector("img");
+  changeArrowImg(img);
+};
 const changeArrowImg = function (img) {
   if (img.src.includes("down")) {
     img.src = img.src.replace("down", "up");
@@ -19,11 +22,5 @@ const changeArrowImg = function (img) {
 
 mobileFeatureBtn.addEventListener("click", toggleSubMenu);
 mobileCompanyBtn.addEventListener("click", toggleSubMenu);
-desktopFeatureBtn.addEventListener("click", (e) => {
-  const img = e.currentTarget.querySelector("img");
-  changeArrowImg(img);
-});
-desktopCompanyBtn.addEventListener("click", (e) => {
-  const img = e.currentTarget.querySelector("img");
-  changeArrowImg(img);
-});
+desktopFeatureBtn.addEventListener("click", desktopArrowChange);
+desktopCompanyBtn.addEventListener("click", desktopArrowChange);
