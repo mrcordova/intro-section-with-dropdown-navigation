@@ -15,8 +15,10 @@ const desktopArrowChange = function (e) {
 const changeArrowImg = function (img) {
   if (img.src.includes("down")) {
     img.src = img.src.replace("down", "up");
+    img.alt = img.alt.replace("down", "up");
   } else {
     img.src = img.src.replace("up", "down");
+    img.alt = img.alt.replace("up", "down");
   }
 };
 
