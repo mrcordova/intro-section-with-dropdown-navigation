@@ -41,6 +41,9 @@ const changeArrowImg = function (e) {
     e.currentTarget.querySelector("img").setAttribute("src", imgArrowSrc);
     e.currentTarget.querySelector("img").setAttribute("alt", "down");
   }
+  e.currentTarget.querySelector("img").onload = function () {
+    alert("New image has been loaded");
+  };
 };
 
 mobileFeatureBtn.addEventListener("click", toggleSubMenu);
