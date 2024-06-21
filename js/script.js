@@ -8,7 +8,9 @@ const imgArrowUpSrc = "./images/icon-arrow-up.svg";
 observer = new MutationObserver((changes) => {
   changes.forEach((change) => {
     if (change.attributeName.includes("src")) {
-      console.dir("here");
+      const img = change.target;
+      console.dir(change);
+      console.dir(img);
     }
   });
 });
@@ -33,7 +35,6 @@ const changeArrowImg = function (img) {
     img.src = imgArrowSrc;
     img.alt = img.alt.replace("up", "down");
   }
-  console.log(img.src);
 };
 
 mobileFeatureBtn.addEventListener("click", toggleSubMenu);
