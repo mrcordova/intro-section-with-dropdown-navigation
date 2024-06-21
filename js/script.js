@@ -14,6 +14,7 @@ const desktopArrowChange = function (e) {
   changeArrowImg(img);
 };
 const changeArrowImg = function (img) {
+  console.log(img.src.includes("down"));
   if (img.src.includes("down")) {
     console.log("go up", img.src);
     img.src = imgArrowUpSrc;
