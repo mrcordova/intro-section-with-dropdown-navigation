@@ -30,15 +30,15 @@ const desktopArrowChange = function (e) {
   changeArrowImg(img);
 };
 const changeArrowImg = function (img) {
-  observer.observe(img, { attributes: true });
+  // observer.observe(img, { attributes: true });
   if (img.src.includes("down")) {
     // console.log("go up", img.src);
-
-    img.alt = img.alt.replace("down", "up");
+    img.setAttribute("src", imgArrowUpSrc);
+    img.setAttribute("alt", img.alt.replace("down", "up"));
   } else {
     // console.log("go down", img.src);
-
-    img.alt = img.alt.replace("up", "down");
+    img.setAttribute("src", imgArrowSrc);
+    img.setAttribute("alt", img.alt.replace("up", "down"));
   }
 };
 
