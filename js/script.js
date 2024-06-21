@@ -21,29 +21,18 @@ observer = new MutationObserver((changes) => {
 });
 
 const toggleSubMenu = function (e) {
-  const img = e.currentTarget.querySelector("img");
+  const img = e.currentTarget.querySelector(".img-arrow-up");
   e.currentTarget.nextElementSibling.classList.toggle("show-submenu");
-  changeArrowImg(e);
+  changeArrowImg(img);
 };
 const desktopArrowChange = function (e) {
-  const img = e.currentTarget.querySelector("img");
-  changeArrowImg(e);
+  const img = e.currentTarget.querySelector(".img-arrow-up");
+  // console.log(img);
+  changeArrowImg(img);
 };
-const changeArrowImg = function (e) {
-  // observer.observe(img, { attributes: true });
-  console.log(e.currentTarget);
-  if (e.currentTarget.querySelector("img").src.toString().includes("down")) {
-    // console.log("go up", img.src);
-    e.currentTarget.querySelector("img").setAttribute("src", imgArrowUpSrc);
-    e.currentTarget.querySelector("img").setAttribute("alt", "up");
-  } else {
-    // console.log("go down", img.src);
-    e.currentTarget.querySelector("img").setAttribute("src", imgArrowSrc);
-    e.currentTarget.querySelector("img").setAttribute("alt", "down");
-  }
-  e.currentTarget.querySelector("img").onload = function () {
-    alert("New image has been loaded");
-  };
+const changeArrowImg = function (img) {
+  img.classList.toggle("img-arrow-down");
+  // console.log(img.classList);
 };
 
 mobileFeatureBtn.addEventListener("click", toggleSubMenu);
