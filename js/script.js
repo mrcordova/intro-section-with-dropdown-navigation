@@ -11,10 +11,10 @@ observer = new MutationObserver((changes) => {
       const img = change.target;
       if (img.src.includes("down")) {
         console.log("go up", img.src);
-        img.src = imgArrowUpSrc;
+        img.setAttribute("src", imgArrowUpSrc);
       } else {
         console.log("go down", img.src);
-        img.src = imgArrowSrc;
+        img.setAttribute("src", imgArrowSrc);
       }
     }
   });
