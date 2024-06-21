@@ -342,8 +342,10 @@ button:hover {
   display: flex;
   align-items: center;
   flex: 1;
-  gap: 2.55rem;
-  padding-inline-start: 4rem;
+  gap: clamp(0rem, -0.8979rem + 3.831vw, 2.55rem);
+  /* gap: 2.55rem; */
+  padding-inline-start: clamp(0rem, -1.4085rem + 6.0094vw, 4rem);
+  /* padding-inline-start: 4rem; */
   align-items: center;
   font-size: 0.9rem;
 }
