@@ -4,6 +4,15 @@ const desktopFeatureBtn = document.getElementById("features-btn");
 const desktopCompanyBtn = document.getElementById("company-btn");
 const imgArrowSrc = "./images/icon-arrow-down.svg";
 const imgArrowUpSrc = "./images/icon-arrow-up.svg";
+
+observer = new MutationObserver((changes) => {
+  changes.forEach((change) => {
+    if (change.attributeName.includes("src")) {
+      console.dir("here");
+    }
+  });
+});
+
 const toggleSubMenu = function (e) {
   const img = e.currentTarget.querySelector("img");
   e.currentTarget.nextElementSibling.classList.toggle("show-submenu");
@@ -14,7 +23,7 @@ const desktopArrowChange = function (e) {
   changeArrowImg(img);
 };
 const changeArrowImg = function (img) {
-  console.log(img.src.includes("down"));
+  observer.observe(img, { attributes: true });
   if (img.src.includes("down")) {
     console.log("go up", img.src);
     img.src = imgArrowUpSrc;
@@ -22,7 +31,6 @@ const changeArrowImg = function (img) {
   } else {
     console.log("go down", img.src);
     img.src = imgArrowSrc;
-
     img.alt = img.alt.replace("up", "down");
   }
   console.log(img.src);
