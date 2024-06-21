@@ -261,10 +261,19 @@ button:hover {
   display: none;
   width: 100%;
 }
-
 .show-submenu {
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
+}
+.show-submenu > li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--medium-gray);
+}
+.show-submenu > li > img {
+  width: 1.2rem;
 }
 
 #register-btn {
