@@ -23,22 +23,23 @@ observer = new MutationObserver((changes) => {
 const toggleSubMenu = function (e) {
   const img = e.currentTarget.querySelector("img");
   e.currentTarget.nextElementSibling.classList.toggle("show-submenu");
-  changeArrowImg(img);
+  changeArrowImg(e);
 };
 const desktopArrowChange = function (e) {
   const img = e.currentTarget.querySelector("img");
-  changeArrowImg(img);
+  changeArrowImg(e);
 };
-const changeArrowImg = function (img) {
+const changeArrowImg = function (e) {
   // observer.observe(img, { attributes: true });
-  if (img.src.includes("down")) {
+  console.log(e.currentTarget);
+  if (e.currentTarget.querySelector("img").src.toString().includes("down")) {
     // console.log("go up", img.src);
-    img.setAttribute("src", imgArrowUpSrc);
-    img.setAttribute("alt", img.alt.replace("down", "up"));
+    e.currentTarget.querySelector("img").setAttribute("src", imgArrowUpSrc);
+    e.currentTarget.querySelector("img").setAttribute("alt", "up");
   } else {
     // console.log("go down", img.src);
-    img.setAttribute("src", imgArrowSrc);
-    img.setAttribute("alt", img.alt.replace("up", "down"));
+    e.currentTarget.querySelector("img").setAttribute("src", imgArrowSrc);
+    e.currentTarget.querySelector("img").setAttribute("alt", "down");
   }
 };
 
