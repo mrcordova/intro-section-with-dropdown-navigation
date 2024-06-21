@@ -15,12 +15,16 @@ const desktopArrowChange = function (e) {
 };
 const changeArrowImg = function (img) {
   if (img.src.includes("down")) {
+    console.log("go up", img.src);
     img.src = imgArrowUpSrc;
     img.alt = img.alt.replace("down", "up");
   } else {
+    console.log("go down", img.src);
     img.src = imgArrowSrc;
+
     img.alt = img.alt.replace("up", "down");
   }
+  console.log(img.src);
 };
 
 mobileFeatureBtn.addEventListener("click", toggleSubMenu);
