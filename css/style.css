@@ -207,6 +207,7 @@ button:hover {
 }
 #close-btn {
   align-self: flex-end;
+  padding-block-end: 1.1rem;
 }
 #close-img {
   width: 2rem;
@@ -242,12 +243,16 @@ button:hover {
   display: flex;
   border: 0;
   height: 100%;
-  width: 50%;
+  width: 65%;
   bottom: 0;
   right: 0;
   left: auto;
   flex-direction: column;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  gap: 1rem;
 }
+
 #mobile-menu::backdrop {
   background-color: hsl(from var(--almost-black) h s l / 0.5);
 }
