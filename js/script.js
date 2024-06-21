@@ -9,8 +9,10 @@ observer = new MutationObserver((changes) => {
   changes.forEach((change) => {
     if (change.attributeName.includes("src")) {
       const img = change.target;
-      console.dir(change);
-      console.dir(img);
+      // console.dir(change);
+      // console.dir(img);
+      img.alt = "tedt";
+      console.log(img.alt);
     }
   });
 });
