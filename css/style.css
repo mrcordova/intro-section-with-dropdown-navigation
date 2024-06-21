@@ -72,13 +72,14 @@ button {
 button > img {
   width: 0.6rem;
 }
+
 .img-arrow-up {
-  background-image: url("/images/icon-arrow-up.svg");
+  background-image: url("../images/icon-arrow-up.svg");
   width: 0.6rem;
   height: 0.36rem;
 }
 .img-arrow-down {
-  background-image: url("/images/icon-arrow-down.svg");
+  background-image: url("../images/icon-arrow-down.svg");
   width: 0.6rem;
   height: 0.36rem;
 }
