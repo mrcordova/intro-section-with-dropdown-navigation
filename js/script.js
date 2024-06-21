@@ -2,7 +2,7 @@ const mobileFeatureBtn = document.querySelector("#mobile-features-list>button");
 const mobileCompanyBtn = document.querySelector("#mobile-company-list>button");
 const desktopFeatureBtn = document.getElementById("features-btn");
 const desktopCompanyBtn = document.getElementById("company-btn");
-
+const imgArrowSrc = "./images/icon-arrow-down.svg";
 const toggleSubMenu = function (e) {
   const img = e.currentTarget.querySelector("img");
   e.currentTarget.nextElementSibling.classList.toggle("show-submenu");
@@ -14,10 +14,10 @@ const desktopArrowChange = function (e) {
 };
 const changeArrowImg = function (img) {
   if (img.src.includes("down")) {
-    img.src = img.src.replace("down", "up");
+    img.src = imgArrowSrc.replace("down", "up");
     img.alt = img.alt.replace("down", "up");
   } else {
-    img.src = img.src.replace("up", "down");
+    img.src = imgArrowSrc;
     img.alt = img.alt.replace("up", "down");
   }
 };
