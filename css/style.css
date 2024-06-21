@@ -251,15 +251,13 @@ button:hover {
 #mobile-menu::backdrop {
   background-color: hsl(from var(--almost-black) h s l / 0.5);
 }
-#mobile-features-menu,
-#mobile-company-menu {
+.mobile-features-menu,
+.mobile-company-menu {
   display: none;
-
   width: 100%;
 }
 
-#mobile-features-list:hover > #mobile-features-menu,
-#mobile-company-list:hover > #mobile-company-menu {
+.show-submenu {
   display: flex;
   flex-direction: column;
 }
