@@ -4,14 +4,14 @@ const desktopFeatureBtn = document.getElementById("features-btn");
 const desktopCompanyBtn = document.getElementById("company-btn");
 const imgArrowSrc = "./images/icon-arrow-down.svg";
 const imgArrowUpSrc = "./images/icon-arrow-up.svg";
-
+let count = 0;
 observer = new MutationObserver((changes) => {
   changes.forEach((change) => {
     if (change.attributeName.includes("src")) {
       const img = change.target;
       // console.dir(change);
       // console.dir(img);
-      img.alt = "tedt";
+      img.alt = `${++count}`;
       console.log(img.alt);
     }
   });
