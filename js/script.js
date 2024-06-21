@@ -1,10 +1,14 @@
 const mobileFeatureBtn = document.querySelector("#mobile-features-list>button");
 const mobileCompanyBtn = document.querySelector("#mobile-company-list>button");
-console.log(mobileCompanyBtn);
 
 const toggleSubMenu = function (e) {
+  const img = e.currentTarget.querySelector("img");
   e.currentTarget.nextElementSibling.classList.toggle("show-submenu");
-  console.log(e.currentTarget.nextElementSibling.classList);
+  if (img.src.includes("down")) {
+    img.src = img.src.replace("down", "up");
+  } else {
+    img.src = img.src.replace("up", "down");
+  }
 };
 
 mobileFeatureBtn.addEventListener("click", toggleSubMenu);
