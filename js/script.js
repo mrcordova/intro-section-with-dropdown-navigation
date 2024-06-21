@@ -7,12 +7,15 @@ const imgArrowUpSrc = "./images/icon-arrow-up.svg";
 let count = 0;
 observer = new MutationObserver((changes) => {
   changes.forEach((change) => {
-    if (change.attributeName.includes("src")) {
+    if (change.attributeName.includes("alt")) {
       const img = change.target;
-      // console.dir(change);
-      // console.dir(img);
-      img.alt = `${++count}`;
-      console.log(img.alt);
+      if (img.src.includes("down")) {
+        console.log("go up", img.src);
+        img.src = imgArrowUpSrc;
+      } else {
+        console.log("go down", img.src);
+        img.src = imgArrowSrc;
+      }
     }
   });
 });
@@ -29,12 +32,12 @@ const desktopArrowChange = function (e) {
 const changeArrowImg = function (img) {
   observer.observe(img, { attributes: true });
   if (img.src.includes("down")) {
-    console.log("go up", img.src);
-    img.src = imgArrowUpSrc;
+    // console.log("go up", img.src);
+
     img.alt = img.alt.replace("down", "up");
   } else {
-    console.log("go down", img.src);
-    img.src = imgArrowSrc;
+    // console.log("go down", img.src);
+
     img.alt = img.alt.replace("up", "down");
   }
 };
